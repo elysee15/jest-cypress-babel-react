@@ -1,4 +1,3 @@
-sudo: false
 language: node_js
 addons:
   apt:
@@ -8,11 +7,15 @@ cache:
   directories:
     - ~/.npm
     - ~/.cache
+  override:
+    - npm ci
+    - npm run cy:verify
+    - npm ci:info
 notifications:
   email: false
-node_js: '12'
+node_js: "12"
 install: echo "install happens as part of setup"
 script: npm run setup
 after_script: npx codecov@3
 branches:
-  only: master
+  only: ["main"]
