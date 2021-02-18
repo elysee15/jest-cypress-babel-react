@@ -2,5 +2,17 @@
     "baseUrl": "http://localhost:8080/",
     "integrationFolder": "cypress/integration",
     "viewportHeight": 900,
-    "viewportWidth": 400
+    "viewportWidth": 400,
+    "projectId": "qdstv5",
+    "screenshotOnRunFailure": true,
+    "screenshotsFolder": "cypress/screenshots",
+    "video": true,
+    "env": {
+            "apiUrl": "http://localhost:3001",
+            "mobileViewportWidthBreakpoint": 414,
+            "coverage": false,
+            "codeCoverage": {
+            "url": "http://localhost:3001/__coverage__"
+        }
+    }
 }

@@ -18,4 +18,4 @@ install: echo "install happens as part of setup"
 script: npm run setup
 after_script: npx codecov@3
 branches:
-  only: ["main"]
+  only: main
